@@ -15,9 +15,10 @@ public class TrainDemoApplication  {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TrainDemoApplication.class, args);
-		TrainMove t = new TrainMove();
-		t.trainMoveSchedule("T2");
-//		t.trainMove2Schedule("T1");
+		TrainMove R1 = new TrainMove("T1");
+        R1.start();
+        TrainMove R2 = new TrainMove("T2");
+        R2.start();
 	}
 
 }

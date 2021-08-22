@@ -24,6 +24,13 @@ public class StationsOptions implements DBInfor {
 				s.setLng(rs.getDouble(4));
 				s.setStationType(rs.getInt(5));
 				s.setRanges(rs.getString(6));
+				s.setImageLocation(rs.getString(7));
+				s.setDescription(rs.getString(8));
+				s.setArea(rs.getString(9));
+				s.setHeight(rs.getString(10));
+				s.setRegion(rs.getString(11));
+				s.setPopulation(rs.getString(12));
+				s.setRanges2(rs.getString(13));
 				list.add(s);
 			}
 			con.close();
