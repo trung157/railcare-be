@@ -64,8 +64,8 @@ public class TrainMove implements Runnable {
 					System.out.println("tau da di qua ga: " + s.getStationName());
 				}
 			}else if(codeTrain.equalsIgnoreCase("T1")) {
-				for (int i = so.getStation().size()-1; i >0; i--) {
-					int stop = so.getStation().size() + 1;
+				for (int i = so.getStation().size()-1; i >=0; i--) {
+					int stop = so.getStation().size();
 					try {
 						Thread.sleep(3000);
 					} catch (InterruptedException e) {
@@ -78,7 +78,7 @@ public class TrainMove implements Runnable {
 					m2.addMove2(s.getStationName(),s.getLat(),s.getLng(),s.getRanges2(),s.getCodeStation(),s.getImageLocation(),
 							s.getDescription(),s.getArea(),s.getHeight(),s.getRegion(),s.getPopulation());
 					
-					for (int j = ds.getdDistance().size()-1; j >0 ; j--) {
+					for (int j = ds.getdDistance().size()-1; j >=0 ; j--) {
 						Distance d = ds.getdDistance().get(j);
 						if (d.getIdRoute() == 2 && s.getCodeStation() == d.getCodeStation()) {
 							System.err.println("Tau dang dung tai ga: " + s.getStationName());
